@@ -1,0 +1,253 @@
+/*
+Theme Name: kampain
+Theme URI: http://does not exist
+Author: Kyrle
+Author URI: http://gbgbeatz.se
+Description: it is what it is
+Version: 1.0
+License: None
+License URI: http://no.one
+Tags: kampain
+Text Domain: not needed
+
+myTheme
+*/
+/* General styles
+------------------------------------------------------------------ */
+@font-face {
+  font-family: newonw;
+  src: url('goes here') format('truetype');
+}
+
+
+
+html {}
+
+body {
+  background-color: rgb(255, 0, 191);
+  min-height: 100%;
+}
+
+#nav {
+
+  background-color: rgb(255, 0, 191);
+}
+
+.menu {
+
+  display: block;
+}
+
+.menu ul {
+  display: block;
+}
+
+.menu li {
+  float: left;
+  display: block;
+  padding: 10px;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  text-align: center;
+  font-size: 50px;
+}
+
+#banner h1 {
+  padding: 50px;
+  font-size: 50px;
+  color: lightcyan;
+  background-color: darkblue;
+  width: 100%;
+  text-align: center;
+}
+
+#quote p {
+  padding: 50px;
+  font-size: 30px;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+#footer p {
+  padding: 50px;
+  font-size: 20px;
+  color: black;
+  background-color: skyblue;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel {
+  margin-left: 0;
+  margin-right: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+ul.slides {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.slides input {
+  display: none;
+}
+
+
+.slide-container {
+  display: block;
+}
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all .7s ease-in-out;
+}
+
+.slide-image img {
+  width: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.slide-image:hover+.carousel-controls label {
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked+.slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked+.slide-container .carousel-controls label {
+  display: block;
+}
+
+
+
+input:checked+.slide-container .nav label {
+  display: block;
+}
+
+.imageshadow {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 997;
+  width: 100%;
+  background-color: black;
+  min-height: 40%;
+  max-height: 40%;
+  opacity: 0.5;
+  color: #fff;
+}
+
+.imgtext {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 998;
+  width: 100%;
+  min-height: 40%;
+  max-height: 40%;
+  color: #fff;
+}
+
+.slide-container h1 {
+  font-size: 50px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.slide-container p {
+  font-size: 30px;
+  padding-left: 30px;
+}
